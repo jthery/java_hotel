@@ -1,0 +1,14 @@
+package management_hotel;
+import java.util.ArrayList;
+
+public class SingleBedroom extends Bedroom {
+
+	public SingleBedroom(int capacity, double price, String name, int number) {
+		super(capacity, price, name, number);
+		capacity = 1;
+		price = 259;
+		name = "singleFirst";
+		number = 300;
+	}
+	
+}

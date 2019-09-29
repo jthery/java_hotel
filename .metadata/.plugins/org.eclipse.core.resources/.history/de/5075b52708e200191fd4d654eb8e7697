@@ -1,0 +1,9 @@
+package management_hotel;
+
+public class FamilyBedroom extends Bedroom {
+
+	public FamilyBedroom(int Acapacity, double Aprice, int AidRoom, String Aname, int Anumber) {
+		super(Acapacity, Aprice, AidRoom, Aname, Anumber);
+	}
+
+}

@@ -1,0 +1,21 @@
+package management_hotel;
+import java.util.ArrayList;
+
+public class Bedroom {
+	private int capacity;
+	private double price;
+	private int idRoom;
+	private String name;
+	private int number;
+	
+	
+	public Bedroom (int capacity, double price, int idRoom, String name, int number) {
+		this.capacity = capacity;
+		this.price = price;
+		this.idRoom = idRoom;
+		this.name = name;
+		this.number = number;
+	}
+
+	
+}

@@ -1,0 +1,17 @@
+package management_hotel;
+
+public class Bedroom {
+	private int capacity;
+	private double price;
+	private int idRoom;
+	private String name;
+	private int number;
+	
+	public Bedroom (int Acapacity, double Aprice, int AidRoom, String Aname, int Anumber) {
+		this.capacity = Acapacity;
+		this.price = Aprice;
+		this.idRoom = AidRoom;
+		this.name = Aname;
+		this.number = Anumber;
+	}
+}

@@ -1,0 +1,11 @@
+package management_hotel;
+
+public class Bedroom {
+	private int capacity;
+	private double price;
+	private int idRoom;
+	private String name;
+	
+	
+	
+}

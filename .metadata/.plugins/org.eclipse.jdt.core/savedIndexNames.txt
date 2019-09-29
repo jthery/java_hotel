@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+E:\Travail\MAMP\htdocs\projets\epsi\java\.metadata\.plugins\org.eclipse.jdt.core
+2374424134.index
+2276063889.index
+3813035075.index
