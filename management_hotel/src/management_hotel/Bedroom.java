@@ -15,12 +15,6 @@ public class Bedroom {
 		this.number = number;
 	}
 	
-
-	Bedroom singleTest = new SingleBedroom(capacity, price, name, number);
-	/** 
-	FamilyBedroom familyTest = new FamilyBedroom(capacity, price, name, number);
-	SuiteBedroom suiteTest = new SuiteBedroom(); **/
-	
 	/** --------------- GETTERS AND SETTERS ----------------- **/
 	
 	public int getCapacity() {
