@@ -4,6 +4,10 @@ import java.util.ArrayList;
 public class SuiteBedroom extends Bedroom {
 	static ArrayList<SuiteBedroom> suite = new ArrayList<SuiteBedroom>();
 	
+	public SuiteBedroom() {
+		super();
+	}
+	
 	public SuiteBedroom(int capacity, double price, String name, int number) {
 		super(capacity, price, name, number);
 	}

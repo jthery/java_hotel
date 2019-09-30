@@ -3,15 +3,22 @@ package management_hotel;
 import java.util.*;
 import java.time.*;
 
-public class Booking {
-	
+public class Booking extends Bedroom {
+
 	static ArrayList<Booking> booking = new ArrayList<>(); 
 	
 	/** VARIABLES **/
-	private int day;
-	private int month;
-	private int years;
-	private LocalDate date;
+	private LocalDate bookingDate;
+	
+	public Booking() { 
+		super();
+		bookingDate = null;
+	};
+	
+	public Booking(int capacity, double price, String name, int number, LocalDate bookingDate) {
+		super(capacity, price, name, number);
+		this.bookingDate = bookingDate;
+	}
 	
 	public void afficherMenuPrincipal() {
 		System.out.println("---- Bienvenue au Grand Hotel BelleVue ----");
@@ -20,55 +27,23 @@ public class Booking {
 		System.out.println("Choix :");
 	}
 	
-	public void getAllBedroom() {
-		/** ----- 1. Lister les chambres ----- **/
-		/** INSTANCE Single bedroom **/
-		SingleBedroom singleA = new SingleBedroom(1, 300, "simple A", 100);
-		singleA.createSingleRoom(singleA);
-
-		SingleBedroom singleB = new SingleBedroom(1, 300, "simple B", 101);
-		singleB.createSingleRoom(singleB);
-
-		SingleBedroom singleC = new SingleBedroom(1, 300, "simple C", 102);
-		singleC.createSingleRoom(singleC);
-
-		/** INSTANCE Family bedroom **/
-		FamilyBedroom familyA = new FamilyBedroom(5, 459, "family A", 200);
-		familyA.createFamilyRoom(familyA);
-
-		FamilyBedroom familyB = new FamilyBedroom(6, 559, "family B", 201);
-		familyB.createFamilyRoom(familyB);
-
-		/** INSTANCE Suite bedroom **/
-		SuiteBedroom suiteA = new SuiteBedroom(10, 659, "suite A", 300);
-		suiteA.createSuiteRoom(suiteA);
-		
-		/** GET ALL BEDROOM **/
-		singleA.getBedroom();
+	public void createBooking(Booking createBooking) {
+		booking.add(createBooking);
 	}
 	
+	public void getBookingBedroom() {
+		for(Booking event: booking) {
+			System.out.println(" Numéro : " + event.getNumber() + " Nom : "+ event.getName() + " Capacité : "+ event.getCapacity() + " Prix : "+ event.getPrice() + "€");
+            System.out.println ("-------------------");    
+        }
+	}
 	/** --------------- GETTERS AND SETTERS ----------------- **/
-	public int getDay() {
-		return day;
+	public LocalDate getBookingDate() {
+		return bookingDate;
 	}
 
-	public void setDay(int day) {
-		this.day = day;
+	public void setBookingDate(LocalDate bookingDate) {
+		this.bookingDate = bookingDate;
 	}
-
-	public int getMonth() {
-		return month;
-	}
-
-	public void setMonth(int month) {
-		this.month = month;
-	}
-
-	public int getYears() {
-		return years;
-	}
-
-	public void setYears(int years) {
-		this.years = years;
-	}
+	
 }
