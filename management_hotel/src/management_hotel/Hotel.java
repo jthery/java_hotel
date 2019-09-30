@@ -1,42 +1,40 @@
 package management_hotel;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Hotel {
 
 	public static void main(String[] args) {
-		System.out.println("---- Bienvenue au grand hotel BelleVue ----");
-		System.out.println(" 1. Réserver une chambre \n 2. Les informations générales \n 3. Contact \n 4. Quitter l'application");
 		
 		Booking booking = new Booking();
-		booking.afficherInfos();
+		booking.afficherMenuPrincipal();
 		
-		/** Observe la saisie du USER **/
+		/** ---------- Saisie de l'USER ---------- **/
 		Scanner scanner = new Scanner(System.in);
 		int choice = scanner.nextInt();
 		
-		/** ---------- INSTANCE Single bedroom ---------- **/
-		SingleBedroom singleA = new SingleBedroom(1, 300, "simple A", 100);
-		singleA.createSingleRoom(singleA);
-
-		SingleBedroom singleB = new SingleBedroom(1, 300, "simple B", 101);
-		singleB.createSingleRoom(singleB);
-
-		SingleBedroom singleC = new SingleBedroom(1, 300, "simple C", 102);
-		singleC.createSingleRoom(singleC);
-
-		/** ---------- INSTANCE Family bedroom ---------- **/
-		FamilyBedroom familyA = new FamilyBedroom(5, 459, "family A", 200);
-		familyA.createFamilyRoom(familyA);
-
-		FamilyBedroom familyB = new FamilyBedroom(6, 559, "family B", 201);
-		familyB.createFamilyRoom(familyB);
-
-		/** ---------- INSTANCE Suite bedroom ---------- **/
-		SuiteBedroom suiteA = new SuiteBedroom(10, 659, "suite A", 300);
-		suiteA.createSuiteRoom(suiteA);
+		/** ---------- 1. RESERVER UNE CHAMBRE ---------- **/
+		if(choice != 1 && choice != 2 && choice != 3 && choice != 4) {
+			System.out.println("Saisissez un choix valable !");
+		} else if (choice == 1){
+			/** ----- 1. Lister les chambres ----- **/
+			booking.getAllBedroom();
+			booking.afficherMenuPrincipal();
+		} else if (choice == 2) {
+			/** ----- 2. Réserver une chambre ----- **/
+		} else if (choice == 3) {
+			/** ----- 3. Afficher les réservation ----- **/
+		} else if (choice == 4) {
+			/** ----- 4. Informations générales ----- **/
+			System.out.println("1. Informations Hotel \n2. Informations propriétaires \n3. Retour");
+			
+			/** System.out.println("Le Grand Hotel BelleVue \n12 rue des Oliviers, 83000 Cavalaires \n03.XX.XX.XX.XX");
+			Owner owner = new Owner("Paul", " Delaroche", "32 rue Casimir Beugnet, 62300 Lens", null, "06.XX.XX.XX.XX");
+			owner.getOwner(); **/
+		} else if (choice == 5) {
+			/** ----- 5. Quitter l'application ----- **/
+		}
 		
-		/** GET ALL BEDROOM **/
-		singleA.getBedroom();
+		
 	}
 }
