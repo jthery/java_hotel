@@ -1,4 +1,5 @@
 package management_hotel;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class SingleBedroom extends Bedroom {
@@ -28,18 +29,18 @@ public class SingleBedroom extends Bedroom {
 	}
 	
 	public static void compareForBooking(int numberBedroomScan) {
-		Boolean exist = false;
-		
-		for (SingleBedroom event: single) {
-			if(numberBedroomScan == event.getNumber()) {
-				exist = true;
-				removeBedroom(event);
-				Booking booking = new Booking(" Numéro : " + event.getNumber() + " Nom : "+ event.getName() + " Capacité : "+ event.getCapacity() + " Prix : "+ event.getPrice() + "€");
-				booking.createBooking(booking);
-				break;
-			}
+        Boolean exist = false;
+        
+        for (SingleBedroom event: single) {
+            if(numberBedroomScan == event.getNumber()) {
+                exist = true;
+                removeBedroom(event);
+                Booking booking = new Booking(event.getCapacity(),event.getPrice(), event.getName() ,event.getNumber(), LocalDate.of(2005, 5,10));
+                booking.createBooking(booking);
+                break;
+            }
 
-		}
-	}
+        }
+    }
 		
 }

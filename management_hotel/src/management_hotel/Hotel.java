@@ -40,8 +40,8 @@ public class Hotel {
 			
 			System.out.println("Chambres correspondante :");
 			if (capacityClient > 0 && capacityClient <= 3 ) {
-				System.out.println("Selectionner le numéro de la chambre :");
 				singlebedroom.getSingleRoom();
+				System.out.println("Selectionner le numéro de la chambre :");
 				int numberBedroom = scanner.nextInt();
 				SingleBedroom.compareForBooking(numberBedroom);
 			} else if (capacityClient > 3 && capacityClient < 10 ) {
@@ -50,15 +50,13 @@ public class Hotel {
 				suitebedroom.getSuiteBedroom();
 			}
 			
-
-		
-			
-			
 			System.out.println("La chambre est réservée");
 			System.out.println("------------------------------------");
-			System.out.println("Récapitulatif de la réservation : " + "\n" + "Nombre de personnes : " + capacityClient + "\n" + "Date de réservation : " + lt + "\n");
+			System.out.println("Récapitulatif de la réservation : " + "\n" 
+								+ "Nombre de personnes : " + capacityClient + "\n" 
+								+ "Date de réservation : " + lt + "\n");
 		} else if (choice == 3) {
-
+			booking.getBookingBedroom();
 		} else if (choice == 4) {
 			
 			System.out.println("1. Informations Hotel \n2. Informations propriétaires \n3. Retour");
